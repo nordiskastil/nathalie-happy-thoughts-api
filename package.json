@@ -15,5 +15,13 @@
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "mongoose": "^8.16.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nordiskastil/nathalie-happy-thoughts-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nordiskastil/nathalie-happy-thoughts-api/issues"
+  },
+  "homepage": "https://github.com/nordiskastil/nathalie-happy-thoughts-api#readme"
 }
