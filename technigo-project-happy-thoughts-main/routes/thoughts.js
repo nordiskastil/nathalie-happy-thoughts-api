@@ -1,6 +1,5 @@
 import express from 'express';
 import { Thought } from '../models/Thought.js';
-const API_URL = 'https://your-deployed-api.onrender.com/thoughts';
 
 const router = express.Router();
 

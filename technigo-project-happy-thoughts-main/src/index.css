@@ -8,6 +8,152 @@
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.app-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thought-form {
+  background: #f3f0f0;
+  border: solid 2px #000;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.thought-form textarea {
+  resize: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+.thought-form button {
+  background-color: #f5aaae;
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.thought-form button:hover {
+  background-color: #fce0df;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.thoughts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thought-card {
+  background: white;
+  border: solid 2px #000;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.heart-button {
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.heart-button.liked {
+  background-color: #ffd5e5;
+}
+
+.time-ago {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Heart animation styles */
+.heart-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  transform: translateX(-50%);
+}
+
+.heart-float {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  font-size: 24px;
+  animation: floatUp 2s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(-20px) translateY(-50px) rotate(-10deg);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateX(20px) translateY(-120px) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .thought-form button {
+    width: 100%;
+  }
 }
